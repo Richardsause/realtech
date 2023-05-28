@@ -1,58 +1,14 @@
-## Restrict what applications can do
-[KDE Action Restrictions][$i]
-action/bookmarks=false
-action/bookmark_add=false
-action/bookmark_edit=false
-action/options_show_menubar=false
-action/options_show_toolbar=true
-action/options_show_statusbar=false
-action/options_save_Settings=false
-action/options_configure=false
-action/options_configure_keybinding=false
-action/options_configure_toolbars=false
-action/options_configure_notifications=false
-action/fullscreen=false
-action/editfiletype=false
-action/configdesktop=false
-action/show_dot[$i]=false
-action/settings=false
-action/show_menubar=false
-action/show_toolbar=true
-action/font=false
-action/keyboard=false
-action/schema=false
-action/history=false
-action/save_default=false
-action/save_sessions_profile=false
-action/find_history=false
-action/rename_session=false
-action/clear_all_histories=false
-action/clear_history=false
-action/save_history=false
-action/activate_menu=false
-
-## don't let the user get acess to the shell
-shell_access=false
-
-## more app settings
-custom_config=false
-editable_desktop_icons=false
-action/lock_screen=false
-logout=false
-movable_toolbars=false
-run_command=false
-run_desktop_files=false
-action/switch_user=false
-
 ## kde telemetry
-[UserFeedback]
+[UserFeedback][$i]
 Enabled=true
 
+[KDE Action Restrictions][$i]
 ## The actual desktop now
 plasma/allow_configure_when_locked=false
 plasma/plasmashell/unlockedDesktop=false
 plasma-desktop/scripting_console=false
 plasma-desktop/add_activities=false
+plasma/plasmashell/unlockedDesktop=false
 
 ## How new stuff
 ghns=false
@@ -65,10 +21,23 @@ print/properties=false
 print/selection=false
 print/system=false
 
-## Dont allow users to mess up the computers
-[KDE Resource Restrictions][$i]
-all=false
+action/bookmarks=false
+action/bookmark_add=false
+action/bookmark_edit=false
+action/options_show_menubar=false
+action/options_show_toolbar=true
+action/options_show_statusbar=false
 
-[ScreenSaver]
-AutoLogout=true
-AutoLogoutTimeout=600
+action/options_save_Settings=false
+action/options_configure=false
+action/options_configure_keybinding=false
+action/options_configure_toolbars=false
+
+action/executeshellcommand=false
+action/show_dot=false
+shell_access=false
+
+[KDE][$i]
+SingleClick=false
+DoubleClickInterval=400
+widgetStyle=breeze
